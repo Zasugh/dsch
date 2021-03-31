@@ -1,0 +1,44 @@
+# Created by https://www.gitignore.io/api/django
+# Edit at https://www.gitignore.io/?templates=django
+
+### Django ###
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+postgresql/
+
+###
+.env
+
+# Pycharm
+.idea/
+
+# vscode
+.vscode/
+
+# archivos static
+static/
+
+# archivos data
+data/BIS/
+data/DICTUM
+data/NOTIFICATION
+data/RECEIPT_DICTUM
+data/REPLY
+data/REPLY_BIS
+data/REQUESTS
+data/RESOLUTION
+data/ADDITIONAL
+data/PLAGIARISM
+data/CONCOURSE
+data/CONCOURSE_DICTUM
+data/CONCOURSE_NOTIFICATION
+data/CONCOURSE_REQUEST
+data/CONCOURSE_DEGREE
+data/CONCOURSE_ANNEXED
+data/CONCOURSE_EXTEND
+data/EVALUATION_ONE
+data/EVALUATION_TWO
+
+

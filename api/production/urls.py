@@ -1,0 +1,36 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('file/', views.AddFileView.as_view(), name='add-file'),
+    path('type-report/', views.ListTypeReportView.as_view(), name='list_type_report'),
+    path('list-teacher-training/<int:year>/<str:institute>/',
+         views.TeacherTrainingListView.as_view(), name='list_teacher_training'),
+    path('list-exchange-activity/<int:year>/<str:division>/<str:ies>/',
+         views.ExchangeActivityListView.as_view(), name='list_exchange_activity'),
+    path('list-academic-events/<int:year>/<str:activity>/<str:month>/',
+         views.AcademicEventsListView.as_view(), name='list_academic_events'),
+    path('list-academic-collaboration/<int:year>/<str:institutions>/',
+         views.AcademicCollaborationListView.as_view(), name='list_academic-collaboration'),
+    path('list-project-collaboration/<int:year>/<int:sector>/',
+         views.ProjectCollaborationView.as_view(), name='list_project_collaboration'),
+    path('list-magazine-publications/<int:year>/<int:index>/<int:type>/',
+         views.MagazinePublicationsListView.as_view(), name='list_magazine_publications'),
+    path('list-electronic-journals/<int:year>/<str:name>/<int:type>/',
+         views.ElectronicJournalsListView.as_view(), name='list_electronic_journals'),
+    path('list-newspaper-publication/<int:year>/<str:name>/',
+         views.NewspaperPublicationListView.as_view(), name='list_newspaper'),
+    path('list-published-books/<int:year>/<int:type>/<str:editorial>/',
+         views.PublishedBooksListView.as_view(), name='list_published_books'),
+    path('list-chapters-books/<int:year>/<str:title>/',
+         views.ChaptersBooksListView.as_view(), name='list_chapter_books'),
+    path('list-book-reviews/<int:year>/',
+         views.BookReviewsListView.as_view(), name='list_book_reviews'),
+    path('list-published-lectures/<int:year>/<int:type>/',
+         views.PublishedLecturesListView.as_view(), name='list_published_lectures'),
+    path('list-unpublished-lectures/<int:year>/<int:type>/<str:institute>/',
+         views.UnpublishedLecturesListView.as_view(), name='list_unpublished_lectures'),
+    path('list-research-projects/<int:year>/<str:departament>/',
+         views.ResearchProjectsListView.as_view(), name='list_research_project'),
+]
